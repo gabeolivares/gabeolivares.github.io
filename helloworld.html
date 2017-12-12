@@ -17,8 +17,8 @@ function sendPaymentDataToAnet() {
     cardData.cardNumber = document.getElementById("CARDNUMBER_ID").value;
     cardData.month = document.getElementById("EXPIRY_MONTH_ID").value;
     cardData.year = document.getElementById("EXPIRY_YEAR_ID").value;
-    //cardData.cardCode = document.getElementById("CARD_CODE").value;
-    //cardData.zip = document.getElementById("ZIP_CODE").value;
+    cardData.cardCode = document.getElementById("CARD_CODE").value;
+    cardData.zip = document.getElementById("ZIP_CODE").value;
 
      var secureData = {};
         secureData.authData = authData;
