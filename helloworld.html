@@ -23,6 +23,7 @@ function sendPaymentDataToAnet() {
      var secureData = {};
         secureData.authData = authData;
         secureData.cardData = cardData;
+	console.log(secureData)
 
 	Accept.dispatchData(secureData, responseHandler);
 
