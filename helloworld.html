@@ -46,8 +46,8 @@ function sendPaymentDataToAnet() {
 }
 function paymentFormUpdate(opaqueData) {
 	console.log(opaqueData);
-    document.getElementById("dataDescriptor").value = opaqueData.dataDescriptor;
-    document.getElementById("dataValue").value = opaqueData.dataValue;
+    //document.getElementById("dataDescriptor").value = opaqueData.dataDescriptor;
+    document.getElementById("blob").value = opaqueData.dataValue + opaqueData.dataDescriptor;
 }
 </script>
 </head>
