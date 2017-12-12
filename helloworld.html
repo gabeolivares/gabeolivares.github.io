@@ -9,6 +9,7 @@
 <script src="https://jstest.authorize.net/v1/Accept.js" charset="utf-8"></script>
 <script type="text/javascript">
 function sendPaymentDataToAnet() {
+	console.log("CLICKED!")
     var authData = {};
         authData.clientKey = "99N9b6wLqntLMj5kGxU3QWrW6qpVU7UxMN66f5gn5ZfyjkhB5AyFZF7e7ALC79HC";
         authData.apiLoginID = "5k6Q47Z5x8";
@@ -44,24 +45,16 @@ function sendPaymentDataToAnet() {
 	}
 }
 function paymentFormUpdate(opaqueData) {
+	console.log(opaqueData);
     document.getElementById("dataDescriptor").value = opaqueData.dataDescriptor;
     document.getElementById("dataValue").value = opaqueData.dataValue;
-
-    // If using your own form to collect the sensitive data from the customer,
-    // blank out the fields before submitting them to your server.
-    document.getElementById("CARDNUMBER_ID").value = "";
-    document.getElementById("EXPIRY_MONTH_ID").value = "";
-    document.getElementById("EXPIRY_YEAR_ID").value = "";
-    document.getElementById("CARD_CODE").value = "";
-    document.getElementById("ZIP_CODE").value = "";
-    //document.getElementById("paymentForm").submit();
 }
 </script>
 </head>
 <body>
 <div class="container panel panel-default" style="margin-top:20px">
 <div class="form-horizontal formDiv" role="form" style="padding-top: 0px;">
-<div class="outer form-group" style="margin-right:0px;margin-left:0px;" onclick="setDefaultValue()">
+<div class="outer form-group" style="margin-right:0px;margin-left:0px;">
 </div>
 <div class="form-group" style="margin-left: 0px; margin-right: 0px;">
 <label class="control-label hidden-xs col-sm-3 col-md-3 col-lg-3" for="cardNumber">Card Number:</label>
