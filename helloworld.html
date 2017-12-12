@@ -28,6 +28,7 @@ function sendPaymentDataToAnet() {
 	Accept.dispatchData(secureData, responseHandler);
 
 	  function responseHandler(response) {
+		  console.log(response)ß
 	    if (response.messages.resultCode === "Error") {
 	        var i = 0;
 	        while (i < response.messages.message.length) {
